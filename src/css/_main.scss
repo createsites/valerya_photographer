@@ -1,0 +1,29 @@
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+}
+
+@layer components {
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fixed_bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+
+  .home {
+    background-image: url("../img/main_bg.jpg");
+  }
+
+  .container {
+    flex: 1 1 auto;
+  }
+}
