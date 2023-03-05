@@ -6,9 +6,6 @@
   body {
     height: 100%;
   }
-  main {
-    @apply leading-relaxed;
-  }
 }
 @layer components {
   .fixed_bg {
@@ -20,11 +17,22 @@
   .home {
     background-image: url("../img/main_bg.jpg");
   }
+  main {
+    @apply leading-relaxed;
+  }
+  .main-container {
+    @apply max-w-[1053px]
+      mx-auto
+      px-8 lg:px-0 pt-14 lg:pt-0
+      min-h-screen
+      flex flex-col;
+  }
   .top-menu {
     @apply w-full
       lg:my-11
       px-8 lg:px-0
-      absolute lg:static top-11 left-0;
+      z-10
+      absolute lg:static top-3 left-0;
   }
   .top-menu button .ham {
     cursor: pointer;
@@ -40,7 +48,7 @@
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
     stroke: #fff;
     stroke-width: 5;
-    stroke-linecap: round;
+    stroke-linecap: square;
   }
   .top-menu button .ham1 .top {
     stroke-dasharray: 40 139;
@@ -71,22 +79,46 @@
         lg:flex hidden justify-center gap-9;
   }
   .top-menu a {
-    @apply border-b-2 border-transparent
-        rounded
+    @apply border-b lg:border-b-2 lg:border-transparent border-black
+        rounded-none lg:rounded
         transition
         duration-500
         block lg:inline-block
-        mr-10 mb-[1px] lg:m-0
+        mr-10 lg:m-0
         text-xl lg:text-base
         py-2 px-4 lg:px-1 lg:pb-[.2rem] lg:pt-0
-        bg-neutral-800/[.9] lg:bg-transparent;
+        bg-neutral-800 lg:bg-transparent;
   }
   .top-menu a:hover,
   .top-menu a.active {
     @apply lg:border-stone-400
-        bg-neutral-800  lg:bg-transparent;
+        bg-neutral-900 lg:bg-transparent;
   }
   .top-menu a:active {
     @apply bg-stone-400;
+  }
+  .portfolio {
+    @apply flex
+      flex-wrap
+      lg:justify-between
+      justify-center
+      gap-4;
+  }
+  .portfolio > a {
+    @apply w-[340px] relative;
+  }
+  .portfolio > a.wide {
+    @apply w-[694px];
+  }
+  .portfolio > a > span {
+    @apply text-whitetext
+        text-4xl
+        absolute
+        top-1/2 -mt-[1.5rem]
+        w-full
+        text-center;
+  }
+  footer img {
+    @apply w-[32px] lg:w-full;
   }
 }

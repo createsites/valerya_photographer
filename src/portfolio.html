@@ -1,0 +1,36 @@
+@@include('partials/header.html', {
+"title": "Portfolio of Valery Manuilov",
+})
+
+<body class="bg-black text-whitetext">
+
+<div class="container main-container">
+  @@include('partials/head.html', {
+    "page": "portfolio"
+  })
+  <div class="flex-1">
+    <h1 class="text-6xl font-head mt-8 lg:mt-16 mb-11 lg:mb-16 text-center">My Portfolio</h1>
+    <main class="portfolio">
+      <a href="#">
+        <span>Portraits</span>
+        <img src="img/portfolio/portraits.jpg" width="340" height="491"/>
+      </a>
+      <a href="#" class="wide">
+        <span>Family</span>
+        <img src="img/portfolio/family.jpg" width="694" height="491"/>
+      </a>
+      <a href="#" class="wide">
+        <span>Fashion</span>
+        <img src="img/portfolio/fashion.jpg" width="694" height="491"/>
+      </a>
+      <a href="#">
+        <span>Love Story</span>
+        <img src="img/portfolio/love_story.jpg" width="340" height="491"/>
+      </a>
+    </main>
+  </div>
+  @@include('partials/footer.html')
+</div>
+
+</body>
+</html>
