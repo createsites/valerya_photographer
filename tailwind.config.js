@@ -31,7 +31,6 @@ module.exports = {
     // для расширения (добавление к уже существующим стилям)
     extend: {
       colors: {
-        'deeppink': '#9b168b',
         'whitetext': '#fcfcfc',
       }
     },
