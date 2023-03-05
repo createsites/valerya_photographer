@@ -1,40 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./css/style.css" rel="stylesheet">
-  <title>Valery Manuylov</title>
-</head>
+@@include('partials/header.html', {
+"title": "About Valery Manuilov",
+})
+
 <body class="bg-black text-whitetext">
 
 <div class="container max-w-[1053px] mx-auto px-8 lg:px-0 min-h-screen flex flex-col">
-  <nav class="top-menu">
-    <button class="float-right lg:hidden -mt-2 -mr-6" onclick="this.parentElement.classList.toggle('active')">
-      <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="60">
-        <path
-          class="line top"
-          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"/>
-        <path
-          class="line middle"
-          d="m 30,50 h 40"/>
-        <path
-          class="line bottom"
-          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"/>
-      </svg>
-    </button>
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">About me</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Process</a></li>
-      <li><a href="#">Price</a></li>
-      <li><a href="#">Advantage</a></li>
-      <li><a href="#">Questions</a></li>
-      <li><a href="#">Reviews</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+  @@include('partials/head.html', {
+    "page": "about"
+  })
   <div class="flex-1 flex justify-between">
     <div class="basis-1/2">
       <header class="font-head mt-16 mb-11">
@@ -48,12 +21,7 @@
       <img src="img/about.jpg" class="float-right" alt="Valery Manuilov"/>
     </div>
   </div>
-  <footer class="flex justify-center gap-8 mt-11 mb-5">
-    <a href="#"><img src="img/instagram.png" alt="Instagram of Valery Manuilov"/></a>
-    <a href="#"><img src="img/facebook.png" alt="Facebook of Valery Manuilov"/></a>
-    <a href="#"><img src="img/vkontakte.png" alt="VK of Valery Manuilov"/></a>
-    <a href="#"><img src="img/gmail.png" alt="Email to Valery Manuilov"/></a>
-  </footer>
+  @@include('partials/footer.html')
 </div>
 
 </body>
