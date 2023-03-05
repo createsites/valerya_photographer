@@ -6,6 +6,9 @@
   body {
     height: 100%;
   }
+  main {
+    @apply leading-relaxed;
+  }
 }
 @layer components {
   .fixed_bg {
@@ -19,7 +22,7 @@
   }
   .top-menu {
     @apply w-full
-      lg:m-11
+      lg:my-11
       px-8 lg:px-0
       absolute lg:static top-11 left-0;
   }
