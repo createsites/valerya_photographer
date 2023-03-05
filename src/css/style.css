@@ -8,11 +8,6 @@
   }
 }
 @layer components {
-  .wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
   .fixed_bg {
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,7 +17,15 @@
   .home {
     background-image: url("../img/main_bg.jpg");
   }
-  .container {
-    flex: 1 1 auto;
+  .top-menu a {
+    @apply border-b-2
+        border-transparent
+        transition
+        duration-500
+        inline-block
+        pb-[.2rem];
+  }
+  .top-menu a:hover {
+    @apply border-stone-400;
   }
 }
