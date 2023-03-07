@@ -1,162 +1,202 @@
 @layer base {
-  html,
-  body {
-    height: 100%;
-  }
+    html,
+    body {
+        height: 100%;
+    }
 }
 
 @layer components {
 
-  .fixed_bg {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-  }
-
-  .home {
-    background-image: url("../img/main_bg.jpg");
-  }
-
-  main {
-    @apply leading-relaxed
-  }
-
-  .main-container {
-    @apply
-      max-w-[1053px]
-      mx-auto
-      px-8 lg:px-0 pt-14 lg:pt-0
-      min-h-screen
-      flex flex-col
-  }
-
-  .top-menu {
-
-    // start menu icon
-    button {
-
-      .ham {
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-        transition: transform 400ms;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      .line {
-        fill:none;
-        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-        stroke: #fff;
-        stroke-width:5;
-        stroke-linecap: square;
-      }
-      .ham1 .top {
-        stroke-dasharray: 40 139;
-      }
-      .ham1 .bottom {
-        stroke-dasharray: 40 180;
-      }
-      .ham2 .top {
-        stroke-dasharray: 40 121;
-      }
+    .fixed_bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
     }
 
-    &.active {
-      .ham1 .bottom {
-        stroke-dashoffset: -138px;
-      }
-      .ham1 .top {
-        stroke-dashoffset: -98px;
-      }
-      .hamRotate {
-        transform: rotate(45deg);
-      }
-      .hamRotate180 {
-        transform: rotate(180deg);
-      }
-
-      // end menu icon
-
-      ul {
-        @apply block
-      }
+    .home {
+        background-image: url("../img/main_bg.jpg");
     }
 
-    ul {
-      @apply
-        whitespace-nowrap
-        lg:flex hidden justify-center gap-9
+    main {
+        @apply leading-relaxed
     }
 
-    a {
-      @apply
-        border-b lg:border-b-2 lg:border-transparent border-black
-        rounded-none lg:rounded
-        transition
-        duration-500
-        block lg:inline-block
-        mr-10 lg:m-0
-        text-xl lg:text-base
-        py-2 px-4 lg:px-1 lg:pb-[.2rem] lg:pt-0
-        bg-neutral-800 lg:bg-transparent
-    }
-
-    a:hover,
-    a.active {
-      @apply
-        lg:border-stone-400
-        bg-neutral-900 lg:bg-transparent
-    }
-
-    a:active {
-      @apply
-        bg-stone-400
-    }
-
-    // стили для .top-menu
-    @apply
-      w-full
-      lg:my-11
-      px-8 lg:px-0
-      z-10
-      absolute lg:static top-3 left-0
-  }
-
-  .portfolio {
-
-    &>a {
-
-      &.wide {
-        @apply w-[694px]
-      }
-
-      &>span {
+    .main-container {
         @apply
-        text-whitetext
-        text-4xl
-        absolute
-        top-1/2 -mt-[1.5rem]
+        max-w-[1053px]
+        mx-auto
+        px-8 lg:px-0 pt-14 lg:pt-0
+        min-h-screen
+        flex flex-col
+    }
+
+    .top-menu {
+
+        // start menu icon
+        button {
+
+            .ham {
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+                transition: transform 400ms;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            .line {
+                fill: none;
+                transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+                stroke: #fff;
+                stroke-width: 5;
+                stroke-linecap: square;
+            }
+
+            .ham1 .top {
+                stroke-dasharray: 40 139;
+            }
+
+            .ham1 .bottom {
+                stroke-dasharray: 40 180;
+            }
+
+            .ham2 .top {
+                stroke-dasharray: 40 121;
+            }
+        }
+
+        &.active {
+            .ham1 .bottom {
+                stroke-dashoffset: -138px;
+            }
+
+            .ham1 .top {
+                stroke-dashoffset: -98px;
+            }
+
+            .hamRotate {
+                transform: rotate(45deg);
+            }
+
+            .hamRotate180 {
+                transform: rotate(180deg);
+            }
+
+            // end menu icon
+
+            ul {
+                @apply block
+            }
+        }
+
+        ul {
+            @apply
+            whitespace-nowrap
+            lg:flex hidden justify-center gap-9
+        }
+
+        a {
+            @apply
+            border-b lg:border-b-2 lg:border-transparent border-black
+            rounded-none lg:rounded
+            transition
+            duration-500
+            block lg:inline-block
+            mr-10 lg:m-0
+            text-xl lg:text-base
+            py-2 px-4 lg:px-1 lg:pb-[.2rem] lg:pt-0
+            bg-neutral-800 lg:bg-transparent
+        }
+
+        a:hover,
+        a.active {
+            @apply
+            lg:border-stone-400
+            bg-neutral-900 lg:bg-transparent
+        }
+
+        a:active {
+            @apply
+            bg-stone-400
+        }
+
+        // стили для .top-menu
+        @apply
         w-full
-        text-center
-      }
-
-      @apply w-[340px] relative
+        lg:my-11
+        px-8 lg:px-0
+        z-10
+        absolute lg:static top-3 left-0
     }
 
-    @apply
-      flex
-      flex-wrap
-      lg:justify-between
-      justify-center
-      gap-4
-  }
+    .portfolio {
 
-  footer {
+        & > a {
 
-    img {
-      @apply w-[32px] lg:w-full
+            &.wide {
+                @apply w-[694px]
+            }
+
+            & > span {
+                @apply
+                text-whitetext
+                text-4xl
+                absolute
+                top-1/2 -mt-[1.5rem]
+                w-full
+                text-center
+            }
+
+            @apply w-[340px] relative
+        }
+
+        @apply
+        flex
+        flex-wrap
+        lg:justify-between
+        justify-center
+        gap-4
     }
-  }
+
+    .process {
+
+        &>div {
+
+            &:last-child {
+                @apply mb-0
+            }
+
+            @apply
+            flex
+            justify-between
+            gap-8
+            mb-8
+        }
+
+        .process_icon {
+
+            svg {
+                @apply
+                w-12 h-12
+                fill-neutral-400
+            }
+        }
+
+        h3 {
+            @apply text-2xl font-bold mb-1
+        }
+
+        p {
+            @apply text-neutral-400
+        }
+    }
+
+    footer {
+
+        img {
+            @apply w-[32px] lg:w-full
+        }
+    }
 }

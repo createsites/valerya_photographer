@@ -22,17 +22,17 @@
   }
   .main-container {
     @apply max-w-[1053px]
-      mx-auto
-      px-8 lg:px-0 pt-14 lg:pt-0
-      min-h-screen
-      flex flex-col;
+        mx-auto
+        px-8 lg:px-0 pt-14 lg:pt-0
+        min-h-screen
+        flex flex-col;
   }
   .top-menu {
     @apply w-full
-      lg:my-11
-      px-8 lg:px-0
-      z-10
-      absolute lg:static top-3 left-0;
+        lg:my-11
+        px-8 lg:px-0
+        z-10
+        absolute lg:static top-3 left-0;
   }
   .top-menu button .ham {
     cursor: pointer;
@@ -76,33 +76,33 @@
   }
   .top-menu ul {
     @apply whitespace-nowrap
-        lg:flex hidden justify-center gap-9;
+            lg:flex hidden justify-center gap-9;
   }
   .top-menu a {
     @apply border-b lg:border-b-2 lg:border-transparent border-black
-        rounded-none lg:rounded
-        transition
-        duration-500
-        block lg:inline-block
-        mr-10 lg:m-0
-        text-xl lg:text-base
-        py-2 px-4 lg:px-1 lg:pb-[.2rem] lg:pt-0
-        bg-neutral-800 lg:bg-transparent;
+            rounded-none lg:rounded
+            transition
+            duration-500
+            block lg:inline-block
+            mr-10 lg:m-0
+            text-xl lg:text-base
+            py-2 px-4 lg:px-1 lg:pb-[.2rem] lg:pt-0
+            bg-neutral-800 lg:bg-transparent;
   }
   .top-menu a:hover,
   .top-menu a.active {
     @apply lg:border-stone-400
-        bg-neutral-900 lg:bg-transparent;
+            bg-neutral-900 lg:bg-transparent;
   }
   .top-menu a:active {
     @apply bg-stone-400;
   }
   .portfolio {
     @apply flex
-      flex-wrap
-      lg:justify-between
-      justify-center
-      gap-4;
+        flex-wrap
+        lg:justify-between
+        justify-center
+        gap-4;
   }
   .portfolio > a {
     @apply w-[340px] relative;
@@ -112,11 +112,30 @@
   }
   .portfolio > a > span {
     @apply text-whitetext
-        text-4xl
-        absolute
-        top-1/2 -mt-[1.5rem]
-        w-full
-        text-center;
+                text-4xl
+                absolute
+                top-1/2 -mt-[1.5rem]
+                w-full
+                text-center;
+  }
+  .process > div {
+    @apply flex
+            justify-between
+            gap-8
+            mb-8;
+  }
+  .process > div:last-child {
+    @apply mb-0;
+  }
+  .process .process_icon svg {
+    @apply w-12 h-12
+                fill-neutral-400;
+  }
+  .process h3 {
+    @apply text-2xl font-bold mb-1;
+  }
+  .process p {
+    @apply text-neutral-400;
   }
   footer img {
     @apply w-[32px] lg:w-full;
