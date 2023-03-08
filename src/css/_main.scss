@@ -193,6 +193,40 @@
         }
     }
 
+    .advantage {
+
+        ol {
+
+            li {
+                counter-increment: num;
+
+                &:before {
+                    @apply block text-5xl font-normal;
+                    content: counter(num);
+                }
+
+                &:nth-child(-n+9):before {
+                    content: "0" counter(num);
+                }
+            }
+
+            @apply
+            flex
+            flex-col
+            gap-8
+            text-center
+            text-base sm:text-xl
+            text-neutral-400
+            font-semibold;
+
+            counter-reset: num;
+        }
+
+        @apply
+        flex gap-8
+        sm:items-end;
+    }
+
     footer {
 
         img {

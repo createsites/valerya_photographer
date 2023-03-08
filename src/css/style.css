@@ -137,6 +137,30 @@
   .process p {
     @apply text-neutral-400;
   }
+  .advantage {
+    @apply flex gap-8
+        sm:items-end;
+  }
+  .advantage ol {
+    @apply flex
+            flex-col
+            gap-8
+            text-center
+            text-base sm:text-xl
+            text-neutral-400
+            font-semibold;
+    counter-reset: num;
+  }
+  .advantage ol li {
+    counter-increment: num;
+  }
+  .advantage ol li:before {
+    @apply block text-5xl font-normal;
+    content: counter(num);
+  }
+  .advantage ol li:nth-child(-n+9):before {
+    content: "0" counter(num);
+  }
   footer img {
     @apply w-[32px] lg:w-full;
   }

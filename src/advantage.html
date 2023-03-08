@@ -1,0 +1,53 @@
+@@include('partials/header.html', {
+    "title": "Advantage",
+})
+
+<body class="bg-black text-whitetext">
+
+<div class="container main-container">
+    @@include('partials/head.html', {
+        "page": "advantage"
+    })
+    <div class="flex-1">
+        <h1 class="text-6xl font-head mt-8 lg:mt-16 mb-11 text-center">Advantages</h1>
+        <main class="advantage">
+            <div class="md:basis-1/4 sm:basis-1/2 basis-2/3">
+                <img src="img/advantage/advantage-1.jpg" height="704" width="240"/>
+            </div>
+            <div class="basis-1/4 md:block hidden">
+                <img src="img/advantage/advantage-2.jpg" height="675" width="240"/>
+            </div>
+            <div class="sm:basis-1/4 basis-1/3 md:block hidden">
+                <img src="img/advantage/advantage-3.jpg" height="450" width="240"/>
+            </div>
+            <ol class="md:basis-1/4 basis-1/2">
+                <li>
+                    опыт съемок<br/>
+                    более 2 лет
+                </li>
+                <li>
+                    Организация<br/>
+                    съемки под ключ
+                </li>
+                <li>
+                    Передаю<br/>
+                    исходники в<br/>
+                    течение 1-2 дней
+                </li>
+                <li>
+                    Помощь<br/>
+                    в создании ленты<br/>
+                    для Инстаграм
+                </li>
+                <li>
+                    Качественная<br/>
+                    ретушь фото
+                </li>
+            </ol>
+        </main>
+    </div>
+    @@include('partials/footer.html')
+</div>
+
+</body>
+</html>
