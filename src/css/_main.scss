@@ -18,6 +18,13 @@
         background-image: url("../img/main_bg.jpg");
     }
 
+    h1 {
+        @apply
+        md:text-6xl text-4xl
+        font-head
+        mt-8 lg:mt-16 mb-11
+    }
+
     main {
         @apply leading-relaxed
     }
@@ -225,6 +232,14 @@
         @apply
         flex gap-8
         sm:items-end;
+    }
+
+    .contacts {
+        @apply flex md:flex-row flex-col md:items-start items-center;
+
+        p {
+            @apply mb-8 md:text-2xl text-lg
+        }
     }
 
     footer {

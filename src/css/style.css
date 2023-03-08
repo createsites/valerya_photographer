@@ -17,6 +17,11 @@
   .home {
     background-image: url("../img/main_bg.jpg");
   }
+  h1 {
+    @apply md:text-6xl text-4xl
+        font-head
+        mt-8 lg:mt-16 mb-11;
+  }
   main {
     @apply leading-relaxed;
   }
@@ -160,6 +165,12 @@
   }
   .advantage ol li:nth-child(-n+9):before {
     content: "0" counter(num);
+  }
+  .contacts {
+    @apply flex md:flex-row flex-col md:items-start items-center;
+  }
+  .contacts p {
+    @apply mb-8 md:text-2xl text-lg;
   }
   footer img {
     @apply w-[32px] lg:w-full;

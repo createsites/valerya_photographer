@@ -1,0 +1,31 @@
+@@include('partials/header.html', {
+    "title": "Contacts",
+})
+
+<body class="bg-black text-whitetext">
+
+<div class="container main-container">
+    @@include('partials/head.html', {
+        "page": "contact"
+    })
+    <div class="flex-1">
+        <h1 class="md:text-left text-center">Contacts</h1>
+        <main class="contacts">
+            <div class="md:basis-1/2">
+                <p>Valery Manuylov</p>
+                <p>
+                    Bay Area, California, USA<br/>
+                    Email: <a href="mailto:nugumanova.lera@gmail.com" class="hover:underline -">nugumanova.lera@gmail.com</a><br/>
+                    Phone: 925-917-0991
+                </p>
+            </div>
+            <div class="md:basis-1/2">
+                <img src="img/contacts.jpg" alt="Valery Manuylov"/>
+            </div>
+        </main>
+    </div>
+    @@include('partials/footer.html')
+</div>
+
+</body>
+</html>
