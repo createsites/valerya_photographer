@@ -1,15 +1,8 @@
-/**
- *   Gulp with TailwindCSS - An CSS Utility framework build setup with SCSS
- *   Author : Manjunath G
- *   URL : manjumjn.com | lazymozek.com
- *   Twitter : twitter.com/manju_mjn
- **/
-
 /*
   Usage:
   1. npm install //To install all dev dependencies of package
   2. npm run dev //To start development and server for live preview
-  3. npm run prod //To generate minifed files for live server
+  3. npm run prod //To generate minified files for live server
 */
 
 const { src, dest, task, watch, series, parallel } = require("gulp");

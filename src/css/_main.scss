@@ -234,6 +234,79 @@
         sm:items-end;
     }
 
+    .reviews {
+        position: relative;
+        
+        .reviews_carousel {
+            overflow: hidden;
+            height: 362px;
+            outline: none;
+            font-size: 1.3rem;
+            
+            .carousel-cell {
+                width: 100%;
+                margin-right: 3rem;
+                background-color: #bbb;
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                position: relative;
+
+                img {
+                    float: left;
+                }
+
+                p {
+                    padding: 2rem 3.5rem;
+
+                    a.insta {
+                        position: absolute;
+                        left: 38%;
+                        bottom: 0;
+                        display: block;
+                        line-height: 24px;
+                        padding: 1rem;
+                        background-color: inherit;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        border-radius: 5px;
+                        color: #52525b;
+
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                            float: left;
+                            margin: 0 1rem;
+                            fill: #52525b;
+                        }
+                    }
+                }
+            }
+        }
+
+        .button-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 2rem;
+
+            .button-group {
+                margin-top: -5px;
+
+                .button {
+                    width: 50px;
+                    height: 6px;
+                    cursor: pointer;
+                    background: #f0f0f0;
+
+                    &.is-selected {
+                        background-color: #a3a3a3;
+                    }
+                }
+            }
+        }
+    }
+
     .contacts {
         @apply flex md:flex-row flex-col md:items-start items-center;
 
