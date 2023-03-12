@@ -168,53 +168,89 @@
   }
   .reviews {
     position: relative;
+    overflow: hidden;
+    /* enable Flickity by default */
+  }
+  @media screen and (max-width: 768px) {
+    .reviews {
+      overflow: auto;
+    }
+  }
+  .reviews .carousel:after {
+    content: "flickity";
+    display: none; /* hide :after */
+  }
+  @media screen and (max-width: 768px) {
+    .reviews {
+      /* disable Flickity for large devices */
+    }
+    .reviews .carousel:after {
+      content: "";
+    }
   }
   .reviews .reviews_carousel {
-    overflow: hidden;
     height: 362px;
     outline: none;
-    font-size: 1.3rem;
+    color: #a3a3a3;
+    @apply lg:h-[362px] h-[300px]
+                lg:text-xl text-base;
+  }
+  @media screen and (max-width: 768px) {
+    .reviews .reviews_carousel {
+      height: 100%;
+    }
   }
   .reviews .reviews_carousel .carousel-cell {
     width: 100%;
     margin-right: 3rem;
-    background-color: #bbb;
+    background-color: #262626;
     display: flex;
     justify-content: space-between;
-    align-items: start;
-    position: relative;
   }
-  .reviews .reviews_carousel .carousel-cell img {
-    float: left;
+  @media screen and (max-width: 768px) {
+    .reviews .reviews_carousel .carousel-cell {
+      flex-direction: column;
+    }
   }
-  .reviews .reviews_carousel .carousel-cell p {
-    padding: 2rem 3.5rem;
+  .reviews .reviews_carousel .carousel-cell .avatar {
+    flex-shrink: 0;
+    @apply lg:self-start self-center;
   }
-  .reviews .reviews_carousel .carousel-cell p a.insta {
-    position: absolute;
-    left: 38%;
-    bottom: 0;
-    display: block;
+  .reviews .reviews_carousel .carousel-cell .avatar img {
+    @apply lg:w-full md:w-[235px] w-full;
+  }
+  .reviews .reviews_carousel .carousel-cell .text {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviews .reviews_carousel .carousel-cell .text p {
+    @apply lg:px-8 px-4 lg:py-12 py-8;
+    flex: 1;
+  }
+  .reviews .reviews_carousel .carousel-cell .text a.insta {
+    padding: 1rem 0;
+    display: inline-block;
     line-height: 24px;
-    padding: 1rem;
-    background-color: inherit;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    color: #52525b;
+    color: #e4e4e7;
+    @apply md:ml-12 ml-4 md:mt-0 -mt-4 md:mb-0 mb-12;
   }
-  .reviews .reviews_carousel .carousel-cell p a.insta svg {
+  .reviews .reviews_carousel .carousel-cell .text a.insta svg {
     width: 24px;
     height: 24px;
     float: left;
-    margin: 0 1rem;
-    fill: #52525b;
+    margin-right: 1rem;
+    fill: #a3a3a3;
   }
   .reviews .button-row {
     display: flex;
     gap: 10px;
     justify-content: center;
     margin-top: 2rem;
+  }
+  @media screen and (max-width: 768px) {
+    .reviews .button-row {
+      display: none;
+    }
   }
   .reviews .button-row .button-group {
     margin-top: -5px;

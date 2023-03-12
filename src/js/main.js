@@ -6,7 +6,9 @@ let utils = window.fizzyUIUtils;
 let carousel = document.querySelector('.reviews_carousel');
 let flkty = new Flickity( carousel, {
     prevNextButtons: false,
-    pageDots: false
+    pageDots: false,
+    adaptiveHeight: true,
+    watchCSS: true,
 });
 
 // elements

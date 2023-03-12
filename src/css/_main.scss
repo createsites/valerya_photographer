@@ -236,48 +236,79 @@
 
     .reviews {
         position: relative;
-        
+        overflow: hidden;
+
+        @media screen and ( max-width: 768px ) {
+            overflow: auto;
+        }
+
+        /* enable Flickity by default */
+        .carousel:after {
+            content: 'flickity';
+            display: none; /* hide :after */
+        }
+
+        @media screen and ( max-width: 768px ) {
+            /* disable Flickity for large devices */
+            .carousel:after {
+                content: '';
+            }
+        }
+
         .reviews_carousel {
-            overflow: hidden;
             height: 362px;
             outline: none;
-            font-size: 1.3rem;
-            
+            color: #a3a3a3;
+            @apply
+                lg:h-[362px] h-[300px]
+                lg:text-xl text-base;
+
+            @media screen and ( max-width: 768px ) {
+                height: 100%;
+            }
+
             .carousel-cell {
                 width: 100%;
                 margin-right: 3rem;
-                background-color: #bbb;
+                background-color: #262626;
                 display: flex;
                 justify-content: space-between;
-                align-items: start;
-                position: relative;
 
-                img {
-                    float: left;
+                @media screen and ( max-width: 768px ) {
+                    flex-direction: column;
                 }
 
-                p {
-                    padding: 2rem 3.5rem;
+                .avatar {
+                    flex-shrink: 0;
+                    @apply lg:self-start self-center;
+
+                    img {
+                        @apply lg:w-full md:w-[235px] w-full;
+                    }
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+
+                    p {
+                        @apply lg:px-8 px-4 lg:py-12 py-8;
+                        flex: 1;
+                    }
 
                     a.insta {
-                        position: absolute;
-                        left: 38%;
-                        bottom: 0;
-                        display: block;
+                        padding: 1rem 0;
+                        display: inline-block;
                         line-height: 24px;
-                        padding: 1rem;
-                        background-color: inherit;
-                        -webkit-border-radius: 5px;
-                        -moz-border-radius: 5px;
-                        border-radius: 5px;
-                        color: #52525b;
+                        color: #e4e4e7;
+                        @apply md:ml-12 ml-4 md:mt-0 -mt-4 md:mb-0 mb-12;
 
                         svg {
                             width: 24px;
                             height: 24px;
                             float: left;
-                            margin: 0 1rem;
-                            fill: #52525b;
+                            margin-right: 1rem;
+                            fill: #a3a3a3;
                         }
                     }
                 }
@@ -289,6 +320,10 @@
             gap: 10px;
             justify-content: center;
             margin-top: 2rem;
+
+            @media screen and ( max-width: 768px ) {
+                display: none;
+            }
 
             .button-group {
                 margin-top: -5px;
