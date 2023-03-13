@@ -166,6 +166,52 @@
   .advantage ol li:nth-child(-n+9):before {
     content: "0" counter(num);
   }
+  .question {
+    @apply flex
+        items-center
+        cursor-pointer;
+  }
+  .question .plus_btn {
+    width: 43px;
+    height: 43px;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+  }
+  .question .plus_btn:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #a3a3a3;
+    transform: rotate(90deg);
+    transition: all 0.4s ease;
+  }
+  .question .plus_btn:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #a3a3a3;
+    transition: all 0.4s ease;
+  }
+  .question.active .plus_btn:before {
+    transform: rotate(180deg);
+  }
+  .question.active .plus_btn:after {
+    transform: rotate(180deg);
+  }
+  .answer {
+    @apply flex
+            hidden
+            mt-8 md:mx-10;
+  }
+  .question.active ~ .answer {
+    display: flex;
+  }
   .reviews {
     position: relative;
     overflow: hidden;
