@@ -14,11 +14,11 @@ if (carousel) {
         watchCSS: true,
     });
 
-// elements
+    // elements
     let elements = flkty.getCellElements(); // получаем массив слайдов
     let cellsButtonGroup = document.querySelector('.button-group--cells');
 
-// формируем dom с кнопками навигации
+    // формируем dom с кнопками навигации
     let buttonClass = 'button is-selected';
     let btnElem;
     for (let i = 0; i < elements.length; i++) {
@@ -33,7 +33,7 @@ if (carousel) {
 
     let cellsButtons = utils.makeArray(cellsButtonGroup.children);
 
-// update buttons on select
+    // update buttons on select
     flkty.on('select', function () {
         let previousSelectedButton = cellsButtonGroup.querySelector('.is-selected');
         let selectedButton = cellsButtonGroup.children[flkty.selectedIndex];
@@ -41,7 +41,7 @@ if (carousel) {
         selectedButton.classList.add('is-selected');
     });
 
-// cell select
+    // cell select
     cellsButtonGroup.addEventListener('click', function (event) {
         if (!matchesSelector(event.target, '.button')) {
             return;
@@ -49,12 +49,12 @@ if (carousel) {
         let index = cellsButtons.indexOf(event.target);
         flkty.select(index);
     });
-// previous
+    // previous
     let previousButton = document.querySelector('.button--previous');
     previousButton.addEventListener('click', function () {
         flkty.previous();
     });
-// next
+    // next
     let nextButton = document.querySelector('.button--next');
     nextButton.addEventListener('click', function () {
         flkty.next();
@@ -71,5 +71,21 @@ if (questions) {
         question.addEventListener("click", () => {
             question.classList.toggle('active');
         });
+    });
+}
+
+// fix the 100vh height for mobile devices
+
+if (new URL(document.location).pathname === '/') { // только для главной страницы
+
+    let fixMobileViewport = function () {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    fixMobileViewport();
+
+    window.addEventListener('resize', () => {
+        fixMobileViewport();
     });
 }

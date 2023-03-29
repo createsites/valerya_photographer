@@ -1,7 +1,7 @@
 @layer base {
     html,
     body {
-        height: 100%;
+
     }
 }
 
@@ -16,6 +16,11 @@
 
     .home {
         background-image: url("../img/main_bg.jpg");
+    }
+
+    .container {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
     }
 
     h1 {
@@ -413,6 +418,7 @@
     }
 
     footer {
+        padding-bottom: 1.5rem;
 
         img {
             @apply w-[32px] lg:w-full

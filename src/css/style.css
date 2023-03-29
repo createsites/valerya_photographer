@@ -1,12 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer base {
-  html,
-  body {
-    height: 100%;
-  }
-}
+@layer base {}
 @layer components {
   .fixed_bg {
     background-repeat: no-repeat;
@@ -16,6 +11,10 @@
   }
   .home {
     background-image: url("../img/main_bg.jpg");
+  }
+  .container {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
   }
   h1 {
     @apply md:text-6xl text-4xl
@@ -315,6 +314,9 @@
   }
   .contacts p {
     @apply mb-8 md:text-2xl text-lg;
+  }
+  footer {
+    padding-bottom: 1.5rem;
   }
   footer img {
     @apply w-[32px] lg:w-full;
