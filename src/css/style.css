@@ -11,10 +11,11 @@
   }
   .home {
     background-image: url("../img/main_bg.jpg");
-  }
-  .container {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
+  }
+  .container {
+    height: 100%;
   }
   h1 {
     @apply md:text-6xl text-4xl
@@ -285,6 +286,9 @@
     float: left;
     margin-right: 1rem;
     fill: #a3a3a3;
+  }
+  .reviews .reviews_carousel .carousel-cell:last-child .text a.insta {
+    margin-bottom: 0;
   }
   .reviews .button-row {
     display: flex;
